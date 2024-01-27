@@ -4,8 +4,8 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"go.zzfly.net/gemini-api/util/log"
-	"go.zzfly.net/gemini-api/util/trace"
+	"go.zzfly.net/geminiapi/util/log"
+	"go.zzfly.net/geminiapi/util/trace"
 	"net/http"
 )
 

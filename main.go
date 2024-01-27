@@ -1,7 +1,7 @@
 package main
 
 import "net/http"
-import "go.zzfly.net/gemini-api/api"
+import "go.zzfly.net/geminiapi/api"
 
 func main() {
 	// Listen on port 8080

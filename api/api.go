@@ -1,8 +1,8 @@
 package api
 
 import (
-	"go.zzfly.net/gemini-api/handler"
-	"go.zzfly.net/gemini-api/util/log"
+	"go.zzfly.net/geminiapi/handler"
+	"go.zzfly.net/geminiapi/util/log"
 	"net/http"
 )
 

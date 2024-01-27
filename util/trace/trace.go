@@ -2,8 +2,7 @@ package trace
 
 import (
 	"context"
-	"fmt"
-	"time"
+	"github.com/google/uuid"
 )
 
 const ctxKeyTraceId = "traceId"
@@ -15,6 +14,6 @@ func GetTraceId(ctx context.Context) string {
 
 // WrapTraceInfo wraps the context with a trace id
 func WrapTraceInfo(ctx context.Context) context.Context {
-	traceId := fmt.Sprintf("%d", time.Now().UnixNano())
-	return context.WithValue(ctx, ctxKeyTraceId, traceId)
+	s, _ := uuid.NewUUID()
+	return context.WithValue(ctx, ctxKeyTraceId, s.String())
 }

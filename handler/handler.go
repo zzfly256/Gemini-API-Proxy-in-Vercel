@@ -3,7 +3,7 @@ package handler
 import (
 	"context"
 	"fmt"
-	"go.zzfly.net/gemini-api/util/log"
+	"go.zzfly.net/geminiapi/util/log"
 	"io"
 	"math/rand"
 	"net/http"

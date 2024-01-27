@@ -2,7 +2,7 @@ package log
 
 import (
 	"context"
-	"go.zzfly.net/gemini-api/util/trace"
+	"go.zzfly.net/geminiapi/util/trace"
 	"log"
 )
 
