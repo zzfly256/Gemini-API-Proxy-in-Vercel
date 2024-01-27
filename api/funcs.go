@@ -21,6 +21,16 @@ func getFromHeader(r *http.Request, key string, defaultV string) string {
 	return value
 }
 
+// getFromQuery returns the value of the query key or the default value
+func getFromQuery(r *http.Request, key string, defaultV string) string {
+	value := r.URL.Query().Get(key)
+	if value == "" {
+		return defaultV
+	}
+
+	return value
+}
+
 // getCtx returns a context with the response writer and a trace id
 func getCtx(r *http.Request, w http.ResponseWriter) context.Context {
 	ctx := r.Context()

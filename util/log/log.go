@@ -12,7 +12,7 @@ const (
 )
 
 func Do(ctx context.Context, level string, format string, args ...interface{}) {
-	f := "[" + level + "][" + trace.GetTraceId(ctx) + "] " + format
+	f := "[" + level + "]\t[" + trace.GetTraceId(ctx) + "]\t" + format
 	log.Printf(f, args...)
 }
 

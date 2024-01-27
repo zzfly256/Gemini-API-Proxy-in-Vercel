@@ -17,7 +17,7 @@ func MainHandle(w http.ResponseWriter, r *http.Request) {
 	in := handler.SendToGeminiInput{
 		Url:         getFromHeader(r, "X-Gemini-Url", "/v1beta/models/gemini-pro:generateContent"),
 		ContentType: getFromHeader(r, "X-Gemini-Content-Type", "application/json"),
-		APIKey:      getFromHeader(r, "X-Gemini-Token", ""),
+		APIKey:      getFromQuery(r, "key", ""),
 		Payload:     r.Body,
 	}
 
@@ -25,7 +25,7 @@ func MainHandle(w http.ResponseWriter, r *http.Request) {
 	geminiResp, err := handler.SendToGemini(ctx, in)
 	if err != nil {
 		log.Error(ctx, "send to gemini err: %v", err)
-		doStdResponse(ctx, Response{Code: 500, Body: "Internal server error"})
+		doStdResponse(ctx, Response{Code: 500, Body: "Internal server error. details: " + err.Error()})
 	}
 
 	log.Info(ctx, "end request: %s", in.Url)

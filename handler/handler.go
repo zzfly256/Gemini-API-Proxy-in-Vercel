@@ -37,6 +37,10 @@ func SendToGemini(ctx context.Context, in SendToGeminiInput) ([]byte, error) {
 	parse.RawQuery = query.Encode()
 	fullUrl = parse.String()
 
+	if len(apiKey) < 8 {
+		return nil, fmt.Errorf("invalid api key: %s", apiKey)
+	}
+
 	log.Info(ctx, "using api key: %s****%s", apiKey[0:4], apiKey[len(apiKey)-4:])
 	post, err := httpClient.Post(fullUrl, in.ContentType, in.Payload)
 	if err != nil {
