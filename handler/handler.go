@@ -1,9 +1,9 @@
 package handler
 
 import (
-	"GeminiApi/util/log"
 	"context"
 	"fmt"
+	"go.zzfly.net/gemini-api/util/log"
 	"io"
 	"math/rand"
 	"net/http"

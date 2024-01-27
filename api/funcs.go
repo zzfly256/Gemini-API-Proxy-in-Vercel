@@ -1,11 +1,11 @@
 package api
 
 import (
-	"GeminiApi/util/log"
-	"GeminiApi/util/trace"
 	"context"
 	"encoding/json"
 	"fmt"
+	"go.zzfly.net/gemini-api/util/log"
+	"go.zzfly.net/gemini-api/util/trace"
 	"net/http"
 )
 

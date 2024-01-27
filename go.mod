@@ -1,1 +1,1 @@
-module GeminiApi
+module go.zzfly.net/gemini-api

@@ -1,8 +1,8 @@
 package log
 
 import (
-	"GeminiApi/util/trace"
 	"context"
+	"go.zzfly.net/gemini-api/util/trace"
 	"log"
 )
 
